@@ -2,17 +2,122 @@
 <html>
   <head>
     <title>The World of Water</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/master.css">
+    <style media="screen">
+      p, div{
+        margin: 3%
+      }
+
+      button {
+          width: 100px;
+          height: 24px;
+          font-size: 16px;
+          background-color: green;
+      }
+
+      button:hover {
+          background-color: orange;
+      }
+
+      @media (min-width: 500px) {
+          /* body {
+              background-color: red;
+          } */
+          h1::before {
+              content: "Welcome to My Web Page!";
+          }
+      }
+
+      @media (max-width: 499px) {
+          /* body {
+              background-color: blue;
+          } */
+          h1::before {
+              content: "Welcome!";
+          }
+      }
+    </style>
   </head>
   <body>
     <p>Hello, everyone! Welcome to the site of water. This site introduces to you everything that is related to water resources on earth surface. For a specific topic, click the subject below:</p>
       <ul>
         <li><a href="hydrology.html">Hydrology</a></li>
-        <li>Underground Water</li>
+        <li><a href="ugwater.html">Underground Water</a></li>
         <li><a href="floodmit.html">Flood</a></li>
         <li><a href="supwater.html">Drinking Water</a></li>
         <li><a href="wwtp.html">Wastewater</a></li>
-        <li>Water Pollution</li>
+        <li><a href="pollution.html">Water Pollution</a></li>
       </ul>
+      <p>If you like this website, please take a few seconds to submit the following form to help us improve it.</p>
+      <form>
+        <style>
+            input[type=text] {
+                background-color: lightgray;
+            }
+            input[type=password] {
+                background-color: red;
+            }
+            input[type=number] {
+                background-color: lightgreen;
+            }
+            input:hover{
+                background-color: white
+            }
+        </style>
+          <div>
+              <input name="name" type="text" placeholder="Name">
+              <input name="password" type="password" placeholder="Password">
+              <input name="age" type="number" placeholder="Age">
+          </div>
+
+          <div>
+              Favorite section?
+              <input name="name" type="radio" value="Hydrology"> Hydrology
+              <input name="name" type="radio" value="Hydraulics"> Hydraulics
+              <input name="name" type="radio" value="Wastewater Treatment Plant"> WWTP
+              <input name="name" type="radio" value="Flood Prediction"> Flood Mitigatoin & Management
+              <input name="name" type="radio" value="WaterPollution"> Water Pollution
+              <input name="name" type="radio" value="Drinking Water"> Drinking Water
+              <input name="name" type="radio" value="Underground Water"> Underground Water
+              <input name="name" type="radio" value="None"> Other
+          </div>
+
+          <div>
+              Favorite Font Color?
+              <input name="color" type="radio" value="black"> Default
+              <input name="color" type="radio" value="red"> Red
+              <input name="color" type="radio" value="orange"> Orange
+              <input name="color" type="radio" value="yellow"> Yellow
+              <input name="color" type="radio" value="green"> Green
+              <input name="color" type="radio" value="indigo"> Indigo
+              <input name="color" type="radio" value="blue"> Blue
+              <input name="color" type="radio" value="purple"> Purple
+              <input name="color" type="radio" value="other"> Other
+          </div>
+
+          <div>
+              <input name="specialty" type="text" list="major" placeholder="Your Background">
+              <datalist id="major">
+                  <option value="Agriculture">
+                  <option value="Animal Science">
+                  <option value="Anthropology">
+                  <option value="Architecture">
+                  <option value="Arts">
+                  <option value="Biology">
+                  <option value="Chemical Engineering" >
+                  <option value="Civil Engineering">
+                  <option value="Environmental Engineering">
+                  <option value="Electrical Engineering">
+                  <option value="Hydrology &amp; Water Resources">
+                  <option value="Language">
+                  <option value="Law">
+                  <option value="Mechanical Engineering">
+                  <option value="Petroleum Engineering">
+                  <option value="Other">
+              </datalist>
+          </div>
+      </form>
+      <button type="button" name="button">Click here</button>
   </body>
 </html>
